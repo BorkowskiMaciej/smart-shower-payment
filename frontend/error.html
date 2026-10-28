@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Błąd płatności</title>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="header">
+    <div class="portfolio-brand">PORT SHOWER</div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="title">Płatność nie powiodła się ❌</div>
+
+        <div class="text">
+            Nie udało się zrealizować płatności. Spróbuj ponownie lub skontaktuj się z bosmanem.
+        </div>
+
+        <div class="action-row">
+            <div class="status"></div>
+
+            <button class="main-btn" onclick="retry()">
+                Wróć na stronę główną
+            </button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function retry() {
+        window.location.href = "index.html";
+    }
+</script>
+</body>
+</html>

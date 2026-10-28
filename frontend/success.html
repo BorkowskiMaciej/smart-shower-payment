@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Płatność zakończona</title>
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="header">
+    <div class="portfolio-brand">PORT SHOWER</div>
+</div>
+
+<div class="container">
+    <div class="card">
+        <div class="title">Płatność przyjęta ✅</div>
+
+        <div class="text">
+            Prysznic nr 1 został uruchomiony. Pozostały czas:
+        </div>
+
+        <div class="big-timer" id="timer">--:--</div>
+
+        <div class="action-row">
+            <div class="status" id="status"></div>
+        </div>
+
+        <div class="center" id="returnBtnWrapper" style="display: none; margin-top: 16px;">
+            <button class="main-btn" onclick="window.location.href='index.html'">
+                Powrót na stronę główną
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="config.js"></script>
+<script src="success.js"></script>
+</body>
+</html>

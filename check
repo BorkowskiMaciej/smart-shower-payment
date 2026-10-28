@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+cd "$(dirname "$0")"
+
+echo "Checking Python formatting..."
+black --check backend tests
+
+echo "Linting Python..."
+ruff check backend tests
+
+echo "Checking Python types..."
+mypy
+
+echo "Running Python tests..."
+PYTHONPYCACHEPREFIX="${TMPDIR:-/tmp}/prysznice-portfolio-pycache" \
+    python3 -m unittest discover -s tests -v
+
+echo "Checking JavaScript syntax..."
+for file in frontend/*.js; do
+    node --check "$file"
+done
+
+echo "All checks passed."

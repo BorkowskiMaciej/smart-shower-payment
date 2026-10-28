@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prysznic</title>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<div class="header">
+  <div class="portfolio-brand">PORT SHOWER</div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <div class="title">Usługa prysznica portowego nr 1</div>
+
+    <div class="text">
+      <b>Czas: <span id="duration">—</span></b>  <br />
+    </div>
+    <div class="text">
+     <b>Kwota: <span id="price">—</span> PLN</b>  <br />
+    </div>
+
+    <!-- EMAIL -->
+    <div class="email-row">
+      <label for="email" class="email-label">Adres e-mail</label>
+      <input
+              type="email"
+              id="email"
+              class="email-input"
+              placeholder="Wpisz adres e-mail (wymagane)"
+              autocomplete="email"
+              inputmode="email"
+      />
+      <div class="email-error" id="emailError"></div>
+      <div class="email-hint">
+        Adres e-mail jest wykorzystywany jedynie do śledzenia transakcji płatniczej.
+      </div>
+    </div>
+
+    <div class="checkbox-row checkbox-main">
+      <label>
+        <input type="checkbox" id="acceptAll" />
+        <span>Akceptuję wszystkie wymagane zgody.</span>
+      </label>
+    </div>
+
+    <div class="checkbox-group">
+
+      <div class="checkbox-row">
+        <label>
+          <input type="checkbox" class="agreement" id="terms" />
+          <span>
+            Akceptuję warunki korzystania z prysznica (wymagane).
+          </span>
+        </label>
+      </div>
+
+      <div class="checkbox-row">
+        <label>
+          <input type="checkbox" class="agreement" id="privacy" />
+          <span>
+            Akceptuję politykę prywatności (wymagane).
+          </span>
+        </label>
+      </div>
+
+      <div class="checkbox-row">
+        <label>
+          <input type="checkbox" class="agreement" id="shopRules" />
+          <span>
+            Akceptuję warunki płatności (wymagane).
+          </span>
+        </label>
+      </div>
+
+    </div>
+    <p class="portfolio-note">
+      Wersja portfolio — dane firmy i dokumenty prawne zostały celowo pominięte.
+    </p>
+
+    <div class="notice">
+      ⚠️ Przed dokonaniem płatności należy upewnić się, że kabina prysznicowa jest dostępna i otwarta.
+      Dostęp do wody uruchamia się bezpośrednio po pozytywnej weryfikacji płatności.
+      <br>
+      <br>
+      Podgląd licznika pozostałego czasu będzie dostępny po powrocie ze strony bramki płatniczej -
+      należy skorzystać z przycisku „Wróć do sklepu" udostępnionego przez operatora płatności.
+    </div>
+
+    <div class="action-row">
+      <div class="status" id="status"></div>
+      <button class="main-btn" id="btn" onclick="start()" disabled>
+        Przejdź do płatności
+      </button>
+    </div>
+  </div>
+</div>
+
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
